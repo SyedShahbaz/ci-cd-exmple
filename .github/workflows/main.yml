@@ -19,11 +19,11 @@ jobs:
           dotnet-version: '6.0.x'
           
       - name: Restore
-        run: dotnet restore ./SampleCiCd.sln
+        run: dotnet restore SampleCiCd/SampleCiCd.sln
         
       - name: Build
-        run: dotnet build ./SampleCiCd.sln --configuration Release --no-restore
+        run: dotnet build SampleCiCd/SampleCiCd.sln --configuration Release --no-restore
         
       - name: Publish
-        run: dotnet publish ./SampleCiCd.sln --configuration Release --no-build
+        run: dotnet publish SampleCiCd/SampleCiCd.sln --configuration Release --no-build
       
